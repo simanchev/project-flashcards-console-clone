@@ -14,7 +14,14 @@ class Controller {
   printTopicsController(arrTopic) {
     this.view.showTopic(arrTopic);
     this.view.getNumber()
-      .then((number) => this.getArrQuest(number));
+      .then((number) => {
+        if (number > 0 && number <= 3) {
+          this.getArrQuest(number)
+        } else {
+          console.log('\nНу нет такой темы, поломал нам игру \n')
+          return console.log('Молодец, ага 👏👏👏\n');
+        }
+      });
   }
 
   getArrQuest(topicNumber) {
