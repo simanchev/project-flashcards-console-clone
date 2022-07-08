@@ -6,6 +6,7 @@ class Controller {
 
   run() {
     this.printTopicsController(this.model.readTopics())
+    this.getArrQuest(1)
   }
 
   printTopicsController(arrTopic) {
@@ -13,18 +14,13 @@ class Controller {
   }
 
   getArrQuest(topicNumber) {
-    // return new Promise((resolve, reject) => {
-
-    // })
+    this.model.readContent(`./topics/${topicNumber}.txt`)
+    .then(console.log)
   }
 
   printQuestController(arrQuest, answerNumber) {
-
-    if 
-
-    this.view.showTopic(arrQuest)
+    
   }
-
   
 }
 
