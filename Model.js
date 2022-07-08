@@ -2,7 +2,7 @@ const fs = require('fs');
 
 class Model {
   constructor() {
-    this.topicNames = ['Пятигорск', 'Выдры', 'Еноты'];
+    this.topicNames = ['1. Пятигорск', '2. Спортик', '3. Айтишечка'];
     this.contentArr = []; // будет заполнена методом
   }
 
@@ -24,6 +24,5 @@ class Model {
       });
   }); }
 }
-
 
 module.exports = Model
