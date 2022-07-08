@@ -1,17 +1,20 @@
-class Controller {
-  constructor(model, view) {
-    this.model = model
-    this.view = view
-  }
+// class Controller {
+//   constructor(model, view) {
+//     this.model = model
+//     this.view = view
+//   }
 
   run() {
     this.printTopicsController(this.model.readTopics())
     this.getArrQuest(1)
   }
+//   run() {
+//     this.printTopicsController(this.model.readTopics())
+//   }
 
-  printTopicsController(arrTopic) {
-    this.view.showTopic(arrTopic)
-  }
+//   printTopicsController(arrTopic) {
+//     this.view.showTopic(arrTopic)
+//   }
 
   getArrQuest(topicNumber) {
     this.model.readContent(`./topics/${topicNumber}.txt`)
@@ -21,7 +24,20 @@ class Controller {
   printQuestController(arrQuest, answerNumber) {
     
   }
-  
-}
+//   getArrQuest(topicNumber) {
+//     // return new Promise((resolve, reject) => {
 
-module.exports = Controller
+//     // })
+//   }
+
+//   // printQuestController(arrQuest, answerNumber) {
+
+//   //   if 
+
+//   //   this.view.showTopic(arrQuest)
+//   // }
+
+  
+// }
+
+// module.exports = Controller
