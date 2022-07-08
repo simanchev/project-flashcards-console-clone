@@ -33,11 +33,10 @@ class Controller {
     this.view.getNumber()
       .then(number => {
         if (number !== answer) {
-          console.log('не вер но');
+          console.log('\x1b[31m%s\x1b[0m', '\n😭 ну ё-маё, обшибка... 😭\n');
         } else {
           console.log('Гуд, двигаемся дальше');
         }
-        console.log('number', number);
         return this.printQuestController(number);
       });
   }
