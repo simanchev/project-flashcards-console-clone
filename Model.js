@@ -3,7 +3,7 @@ const fs = require('fs');
 
 class Model {
   constructor() {
-    this.topicNames = ['Пятигорск', 'Выдры', 'Еноты'];
+    this.topicNames = ['1. Пятигорск', '2. Спортик', '3. Айтишечка'];
     this.contentArr = []; // будет заполнена методом
   }
 
@@ -25,6 +25,12 @@ class Model {
       });
   }); }
 }
+
+const model = new Model()
+
+model.readContent(`./topics/2.txt`)
+.then(console.log)
+.catch(console.log)
 
 
 module.exports = Model
